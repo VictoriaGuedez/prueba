@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container-fluid {
+    width: $ancho;
+    height: $alto;
+    padding: 0;
+    margin-left: 2px;
+    margin-right: 2px;
+    @if $colorfondo == #FFE194{
+        background-color: $colorfondo;
+    } @else if $colorfondo == #B5EAEA{
+        background-color: #B5EAEA;
+    }
+    font-size: 18px;
+    font-family: $letra;
+    height: 100%;
+}
+.contenedorMenu {
+    @include cajamenu(100%);
+}
+.logo {
+    width: 100px;    
+}
+.logo:hover {
+        transform: rotateY(45deg);
+}
+.enlacesMenu{
+    display: flex;
+    justify-content: space-around;
+    font-family: $letra;
+    list-style: none;
+    ul {
+        list-style: none;
+        li {
+            width: 60%;
+            display: flex;
+            justify-content: space-around;
+            font-family: $letra;
+            list-style: none;
+            a {
+                display: flex;
+                justify-content: space-around;
+                text-align: center;
+                text-decoration: none;
+                font-size: 1em;
+                color: #FEFBF3;
+                flex-grow: 1;
+                margin-right: 15px;  
+            }
+        }
+    }
+}
+
+ul li a:hover {
+    background-color: #0F044C;
+    border-radius: 20px;
+    padding: 2px;
+}
+
+.vinculoWhatsapp {
+    display: block;
+    width: 70px;
+    height: 70px;
+    color: #fff;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    border-radius: 50%;
+    line-height: 80px;
+    text-align: center;
+    z-index: 999;
+} 
+.vinculoWhatsapp:hover {
+     transform: scale(2);
+}
+.contenedorpresentacion{
+    @include cajacontenedor($letra, $colorcajauno);
+}
+.titulo{
+    @include tituloprincipal($letra, $sizetitulo: 2em)
+}
+#textoClub1{
+    @include textouno ($letra, $colorletratres: #0C4271); 
+}
+.cajitas{
+    width: $ancho/3;
+    height: 40%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2px;
+}
+.caja{
+    width: 100%/3;
+    background-color: #035397;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4px;
+    .caja_foto{
+        width: 250px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+    }
+}
+.cajas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: $colorcajauno;
+    margin-bottom: 4px;
+    padding: 4px;
+    .cajas_foto{
+        width: 200px;
+    }
+    .cajas_titulo{
+        @include tituloprincipal($letra, $sizetitulo);
+    }
+}
+
+.titulouno_caja{
+    @include tituloprincipal($letra,  $sizetitulo: 1.5em);
+    color: #8AC4D0;
+}
+#textoClub1_caja{
+    @include textouno ($letra, $colorletratres:white); 
+
+}
+.carousel-inner {
+    width: 200px;
+}
+.contenedorAliadosComerciales{
+    @extend .contenedorpresentacion;
+}
+#titulodos{
+    @include tituloprincipal($sizetitulo, $sizetitulo: 1.5em);
+    align-content: center;
+}
+.contenedorMenu-footer{
+    @extend .contenedorMenu;
+    font-family: $letra;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    color: white;
+}
+#redesSociales{
+    display: inline-flex;
+    padding: 6px;
+}
+.contenedorclub{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    background-color: $colorcajados;
+    margin-bottom: 4px;
+    .contenedorclub_foto{
+        width: 200px;
+    }
+}

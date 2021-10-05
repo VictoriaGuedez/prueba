@@ -1,0 +1,45 @@
+@mixin cajamenu($ancho){
+    background: radial-gradient(circle, #043bff 16%, #370488 51%, #009bff 90%);
+    width: $ancho;
+    height: 20%;
+    display: -webkit-box;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 5px;
+    margin-bottom: 4px;
+}
+@mixin cajacontenedor($letra, $colorcajauno){
+    font-family: $letra;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    background-color: $colorcajauno;
+    margin-bottom: 4px;
+}
+@mixin tituloprincipal($letra, $sizetitulo){
+    font-family: $letra;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    font-weight: bold;
+    font-size: $sizetitulo;
+}
+@mixin textouno ($letra, $colorletratres){
+    font-family: $letra;
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+    font-size: 1em;
+    padding: 0 20px 0 20px;
+    margin: 20px;
+    color: $colorletratres; 
+}
+@mixin cajas ($ancho){
+    width: $ancho/3;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
