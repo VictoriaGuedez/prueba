@@ -6,7 +6,7 @@
 .container-fluid {
     width: $ancho;
     height: $alto;
-    padding: 0;
+    padding: 5px;
     margin-left: 2px;
     margin-right: 2px;
     @if $colorfondo == #FFE194{
@@ -86,18 +86,19 @@ ul li a:hover {
     @include textouno ($letra, $colorletratres: #0C4271); 
 }
 .cajitas{
-    width: $ancho/3;
-    height: 40%;
+    width: $ancho;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 2px;
+    padding: 1px;
 }
 .caja{
-    width: 100%/3;
+    width: $ancho/3;
     background-color: #035397;
-    display: flex;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 4px;
     .caja_foto{
